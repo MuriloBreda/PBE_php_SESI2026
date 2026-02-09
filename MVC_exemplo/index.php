@@ -1,0 +1,18 @@
+<?php
+
+require_once "Controller/UsuarioController.php";
+
+$usuarioController = new UsuarioController();
+$route = $_GET["route"] ?? '';
+
+switch ($route){
+    case 'usuario/telaCadastro':
+        $usuarioController->telaCadastro();
+        break;
+
+    default:
+        echo "Página não encontrada";
+        break;
+}
+
+?>
