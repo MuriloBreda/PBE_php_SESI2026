@@ -6,7 +6,7 @@
     <title>Formulário Cadsatro</title>
 </head>
 <body>
-    <form action="POST" action="salvar">
+    <form method="POST" action="salvar">
         <input type="text" name="nome" placeholder="Seu nome" require>
         <input type="email" name="email" placeholder="Seu email" require>
         <button type="submit">Enviar</button>

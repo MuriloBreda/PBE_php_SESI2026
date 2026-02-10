@@ -10,6 +10,10 @@ switch ($route){
         $usuarioController->telaCadastro();
         break;
 
+    case 'usuario/salvar':
+        $usuarioController->cadastrar();
+        break;
+
     default:
         echo "Página não encontrada";
         break;
