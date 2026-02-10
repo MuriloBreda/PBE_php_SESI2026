@@ -17,8 +17,18 @@ class UsuarioController{
         $usuario->salvar();
 
         //redirecionar ao depois de salvar
-        header('Location: /PBE_php_SESI2026/MVC_exemplo/usuario/teaCadastro');
+        header('Location: /PBE_php_SESI2026/MVC_exemplo/usuario/telaCadastro');
         exit;
+    }
+
+    public function listarUsuarios(){
+        // :: usado para acessar metodos 'static'
+        $usuarios = Usuario::listar();
+        echo "<pre>";
+        print_r($usuarios);
+        echo "</pre>";
+        require 'View/usuarioListar.php';
+
     }
 }
 

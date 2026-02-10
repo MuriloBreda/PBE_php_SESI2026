@@ -19,6 +19,11 @@ class Usuario{
             'email' => $this->email
         ];
     }
+
+    public static function listar(){
+        // retorna a lista de usuarios
+        return $_SESSION['usuarios'] ?? [];
+    }
 }
 
 ?>
