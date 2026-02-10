@@ -15,6 +15,8 @@
                     <th>Email</th>
                     <th>Ações</th>
                 </tr>
+            </thead>
+            <tbody>
                 <?php foreach($usuarios as $u): ?>
                     <tr>
                         <td><?= $u['nome'] ?></td>
@@ -22,7 +24,7 @@
                         <td>Próxima Aula</td>
                     </tr>
                 <?php endforeach; ?>
-            </thead>
+            </tbody>
 
         </table>
     </header>
