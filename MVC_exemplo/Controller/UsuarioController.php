@@ -6,10 +6,6 @@ require_once "./Model/UsuarioModel.php";
 class UsuarioController{
 
     public function telaCadastro(){
-        session_destroy();
-        echo "<pre>";
-        print_r($_SESSION);
-        echo "</pre>";
         require "View/usuarioCadastrar.php";
     }
 
@@ -19,6 +15,10 @@ class UsuarioController{
 
         $usuario = new Usuario($nome, $email);
         $usuario->salvar();
+
+        //redirecionar ao depois de salvar
+        header('Location: /PBE_php_SESI2026/MVC_exemplo/usuario/teaCadastro');
+        exit;
     }
 }
 
