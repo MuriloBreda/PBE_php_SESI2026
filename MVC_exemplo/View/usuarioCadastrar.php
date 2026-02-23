@@ -6,6 +6,7 @@
     <title>Formulário Cadsatro</title>
 </head>
 <body>
+    <a href="/PBE_php_SESI2026/MVC_exemplo/usuario/listar">Ir para tela listar</a>
     <form method="POST" action="salvar">
         <input type="text" name="nome" placeholder="Seu nome" require>
         <input type="email" name="email" placeholder="Seu email" require>

@@ -25,9 +25,9 @@
                     </tr>
                 <?php endforeach; ?>
             </tbody>
-
         </table>
     </header>
+    <a href="/PBE_php_SESI2026/MVC_exemplo/usuario/telaCadastro">Voltar para tela de Cadastro</a>
     
 </body>
 </html>
