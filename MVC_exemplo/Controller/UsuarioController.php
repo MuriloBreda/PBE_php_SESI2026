@@ -30,6 +30,11 @@ class UsuarioController{
         require 'View/usuarioListar.php';
 
     }
+
+    public function telaEditar(){
+        $usuario = Usuario::buscar($_GET['id']);
+        require 'View/usuarioEditar.php';
+    }
 }
 
 ?>

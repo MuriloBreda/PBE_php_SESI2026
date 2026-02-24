@@ -17,11 +17,13 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($usuarios as $u): ?>
+                <?php foreach($usuarios as $id => $u): ?>
                     <tr>
                         <td><?= $u['nome'] ?></td>
                         <td><?= $u['email'] ?></td>
-                        <td>Próxima Aula</td>
+                        <td>
+                            <a href="/PBE_php_SESI2026/MVC_exemplo/usuario/telaEditar?id=<?= $id ?>">Editar</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -24,6 +24,21 @@ class Usuario{
         // retorna a lista de usuarios
         return $_SESSION['usuarios'] ?? [];
     }
+
+    public static function buscar($id){
+        // select * from usuarios where id = $id; (caso tivesse usando BCD)
+        return $_SESSION['usuarios'][$id] ?? null;
+
+    }
+
+    public function atualizar($id){
+        if(isset($_SESSION['usuarios'][$id])){ //verificar se o usuario existe
+            $_SESSION['usuarios'][$id] = [ //atualizar os novos dados
+                'nome' => $this->nome,
+                'email' => $this->email
+            ];
+        }
+    }
 }
 
 ?>
