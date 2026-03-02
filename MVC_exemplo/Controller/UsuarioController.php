@@ -43,6 +43,12 @@ class UsuarioController{
         exit;
 
     }
+
+    public function excluir(){
+        Usuario::excluir($_GET['id']);
+        header('Location: /PBE_php_SESI2026/MVC_exemplo/usuario/listar');
+        exit;
+    }
 }
 
 ?>
