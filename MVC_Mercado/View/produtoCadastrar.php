@@ -11,6 +11,10 @@
         padding: 0px;
     }
 
+    body{
+        background-color: #d2e2ff95;
+    }
+
     main {
         margin: auto;
         background-color: #507dca;
