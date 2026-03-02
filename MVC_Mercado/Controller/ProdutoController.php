@@ -32,6 +32,25 @@ class ProdutoController{
         require 'View/produtoListar.php';
 
     }
+
+    public function telaEditar(){
+        $produto = Produto::buscar($_GET['id']);
+        require 'View/produtoEditar.php';
+    }
+
+    public function atualizar(){
+        $produto = new Produto($_POST['nome'], $_POST['qntd'], $_POST['valor'], $_POST['validade']);
+        $produto->atualizar($_GET['id']);
+        header('Location: /PBE_php_SESI2026/MVC_Mercado/produto/telaEditar?id='.($_GET['id']));
+        exit;
+
+    }
+
+    public function excluir(){
+        Produto::excluir($_GET['id']);
+        header('Location: /PBE_php_SESI2026/MVC_Mercado/produto/listar');
+        exit;
+    }
 }
 
 ?>

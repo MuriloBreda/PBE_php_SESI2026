@@ -49,6 +49,10 @@
         padding: 8px;
     }
 
+    a{
+        text-decoration: none;
+    }
+
 </style>
 <body>
     <header>
@@ -60,15 +64,21 @@
                     <th>Quantidade</th>
                     <th>Valor</th>
                     <th>Validade</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($produtos as $p): ?>
+                <?php foreach($produtos as $id => $p): ?>
                     <tr>
                         <td><?= $p['nome'] ?></td>
                         <td><?= $p['qntd'] ?></td>
                         <td><?= $p['valor'] ?></td>
                         <td><?= $p['validade'] ?></td>
+                        <td>
+                            <a href="/PBE_php_SESI2026/MVC_Mercado/produto/telaEditar?id=<?= $id ?>">✏️ |</a>
+
+                            <a href="/PBE_php_SESI2026/MVC_Mercado/produto/excluir?id=<?= $id ?>"> 🗑️</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
