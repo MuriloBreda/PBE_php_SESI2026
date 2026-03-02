@@ -73,7 +73,7 @@
 </style>
 <body>
     <main>
-        <h1>Editar usuário</h1>
+        <h1>Editar Produto</h1>
         <br>
         <form method="POST" action="atualizar?id=<?= $_GET['id'] ?>">
             <input type="text" name="id" value="<?= htmlspecialchars($_GET['id'])?>" disabled><br>
